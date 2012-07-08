@@ -13,7 +13,7 @@ p <- ggplot(data=mpg,mapping=aes(x=cty,y=hwy))
 p + geom_point()
 ```
 
-![plot of chunk unnamed-chunk-1](figure/unnamed-chunk-1.png) 
+![plot of chunk unnamed-chunk-1](https://github.com/xccds/Rblog/raw/master/figure/unnamed-chunk-1.png) 
 
 ggplot函数是用来构建基本的图形对象，相当于是一张空白的画布。其中我们需要定义可视化的数据对象(Data)，以及数据变量到图形属性之间的映射(Mapping)。在上面的图形里， 我们使用了mpg数据框，并将cty变量映射到X轴，hwy映射到Y轴。
 
@@ -51,7 +51,7 @@ p <- ggplot(data=mpg,mapping=aes(x=cty,y=hwy,colour=factor(year)))
 p + geom_point()
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
+![plot of chunk unnamed-chunk-3](https://github.com/xccds/Rblog/raw/master/figure/unnamed-chunk-3.png) 
 
 ## 3、统计变换Stat
 统计变换是对原始数据进行了某种提炼或归纳。散点图没有经过统计变换，它展现了数据的原貌。但有时候我们需要提炼后数据，例如下图的平滑曲线就是一种统计变换，它去除了数据的原貌。
@@ -62,7 +62,7 @@ p <- ggplot(data=mpg,mapping=aes(x=cty,y=hwy,colour=factor(year)))
 p + stat_smooth()
 ```
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
+![plot of chunk unnamed-chunk-4](https://github.com/xccds/Rblog/raw/master/figure/unnamed-chunk-4.png) 
 
 你或许会奇怪为什么会有两条平滑曲线，那是因为我们在底层画布定义了颜色属性的映射，底层的设置会影响到所有在其基础上的几何对象和统计变换。
 
@@ -129,7 +129,7 @@ p + geom_point(aes(colour=factor(year)))+
     stat_smooth()
 ```
 
-![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8.png) 
+![plot of chunk unnamed-chunk-8](https://github.com/xccds/Rblog/raw/master/figure/unnamed-chunk-8.png) 
 
 ## 6、分面Facet
 条件绘图是将数据按某种方式分组后分别绘图。分面就是控制条件绘图的方法和排列形式。下图就是将数据按年份变量分组后绘图。这只需要增加一行简单的代码，从中可以看到ggplot的威力在于可以逐步的修改、完善图形。
@@ -143,7 +143,7 @@ p + geom_point(aes(colour=factor(year)))+
     facet_wrap(~ year,ncol=1)
 ```
 
-![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9.png) 
+![plot of chunk unnamed-chunk-9](https://github.com/xccds/Rblog/raw/master/figure/unnamed-chunk-9.png) 
 
 ## 7、最后的调整
 下面我们要对图形精细调整，首先用透明度和扰动解决上图中点的重叠问题，此外还要将排量映射为点的大小。最后增加图名和图例名称。
@@ -159,6 +159,6 @@ p + geom_point(aes(colour=class,size=displ), alpha=0.5,position = "jitter")+
          x='city miles per gallon')
 ```
 
-![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10.png) 
+![plot of chunk unnamed-chunk-10](https://github.com/xccds/Rblog/raw/master/figure/unnamed-chunk-10.png) 
 
 ggplot2中几个重要的核心概念都已经涉及到了，还有坐标系统和位置调整没有提到。希望这篇短文对你有用，由此进入ggplot2的世界，领略数据可视化的力与美。各位也可访问[我的博客](http://xccds1977.blogspot.com)（需翻墙）作进一步的交流。，或是给我发电邮xccds1977@gmail.com。
