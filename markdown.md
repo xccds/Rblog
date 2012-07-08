@@ -75,7 +75,7 @@ p <- ggplot(data=mpg,mapping=aes(x=cty,y=hwy))
 p + geom_point(aes(colour=factor(year)))  + stat_smooth()
 ```
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
+![plot of chunk unnamed-chunk-5](https://github.com/xccds/Rblog/raw/master/figure/unnamed-chunk-5.png) 
 
 下面的命令和之前的是等价的。
 
